@@ -1,0 +1,124 @@
+/* header */
+.navicon {
+    height: 65px;
+    width: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.nav-item {
+  margin-left: 40px; 
+}
+
+/* home page */
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+.profile-img {
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 20%;
+}
+
+
+/* footer */
+footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  color: white;
+}
+
+.footer-links {
+  color: rgba(255, 255, 255, 0.75); 
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75); 
+  text-decoration: none;
+  transition: color 0.3s; 
+}
+
+.footer-links a:hover {
+  color: rgba(255, 255, 255, 1); 
+}
+
+/* wave animation */
+footer .wave {
+  position: absolute;
+  top: -50px; 
+  left: 0;
+  width: 100%;
+  height: 50px; 
+  background: url(https://i.ibb.co/rZt4Nhg/wave.png);
+  background-size: 1000px 50px; 
+}
+
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 5px; 
+  animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 0;
+  animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 10px; 
+  animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
